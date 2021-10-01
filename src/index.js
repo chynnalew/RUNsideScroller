@@ -1,12 +1,18 @@
 import Phaser from 'phaser';
-import Game from './scenes/Game.js';
+import LoadScene from './scenes/LoadScene.js';
 
 
 export default new Phaser.Game({
-    type: Phaser.AUTO,
-    parent: 'phaser-example',
-    width: 800,
-    height: 600,
-    scene: Game,
+  type: Phaser.AUTO,
+  parent: 'phaser-example',
+  width: 1100,
+  height: 700,
+  scene: [
+    LoadScene
+  ],
+  render: {
+      pixelArt: true
+      //don't sharpen pixel art!
+  }
 });
 

@@ -1,5 +1,5 @@
-import { CST } from "../CST";
-import MenuScene from "./MenuScene";
+import {CST} from "../CST.js";
+import MenuScene from "./MenuScene.js";
 import Phaser from  '../lib/phaser.js';
 export default class LoadScene extends Phaser.Scene
 {
@@ -10,15 +10,11 @@ export default class LoadScene extends Phaser.Scene
     })
   }
 
-  init()
-  {
-
-  }
   preload ()
   {
     this.load.image("sky", "assets/image/sky.png");
     this.load.image("sand", "assets/image/sand_back.png");
-    this.load.image("moon", "src/assets/image/moon.png");
+    this.load.image("moon", "assets/image/moon.png");
     this.load.image("options_button", "assets/image/options_button.png");
     this.load.image("play_button", "assets/image/play_button.png");
     this.load.image("logo","assets/image/logo2.png");
@@ -55,6 +51,6 @@ export default class LoadScene extends Phaser.Scene
   create ()
   {
     this.scene.add(CST.SCENES.MENU, MenuScene, false);
-    this.scene.start(CST.SCENES.MENU, "hello from loadscene!");
+    this.scene.start(CST.SCENES.MENU, MenuScene);
   } 
 }

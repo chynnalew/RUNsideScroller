@@ -1,13 +1,14 @@
 import Phaser from './lib/phaser.js';
 import LoadScene from './scenes/LoadScene.js';
 
+console.log('hello?');
 
 export default new Phaser.Game({
   type: Phaser.AUTO,
   width: 1100,
   height: 700,
   scene: [
-    LoadScene
+    LoadScene,
   ],
   render: {
       pixelArt: true
